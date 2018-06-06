@@ -37,7 +37,7 @@ class CuentosController < ApplicationController
   end
 
   def cuento_params
-    params.require(:cuento).permit(:titulo, :autor, :nacionalidad, :region, :tipo, :editorial, :isbn, :archivo)
+    params.require(:cuento).permit(:titulo, :autor, :nacionalidad, :region, :tipo, :editorial, :isbn, :personaje, :tema, :version, :archivo)
   end
 
   def set_cuento

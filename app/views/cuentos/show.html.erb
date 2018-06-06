@@ -1,2 +1,59 @@
-<h1>Cuentos#show</h1>
-<p>Find me in app/views/cuentos/show.html.erb</p>
+
+<%= link_to 'Todos los cuentos', cuentos_path %>
+<h1><%= @cuento.titulo %></h1>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @cuento.autor %>
+</p>
+
+<p>
+  <strong>Nacionalidad:</strong>
+  <%= @cuento.nacionalidad %>
+</p>
+
+<p>
+  <strong>Región:</strong>
+  <%= @cuento.region %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @cuento.region %>
+</p>
+
+<p>
+  <strong>Editorial:</strong>
+  <%= @cuento.editorial %>
+</p>
+
+<p>
+  <strong>ISBN:</strong>
+  <%= @cuento.isbn %>
+</p>
+
+<p>
+  <strong>Personaje(s):</strong>
+  <%= @cuento.personaje %>
+</p>
+
+<p>
+  <strong>Tema(s):</strong>
+  <%= @cuento.tema %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @cuento.version %>
+</p>
+
+<object data="<%=@cuento.archivo.url if @cuento.archivo? %>?#zoom=85&scrollbar=0&toolbar=0&navpanes=0" type="application/pdf" width="750" height="750">
+    <embed src="<%=@cuento.archivo.url if @cuento.archivo?%>" type="application/pdf">
+    <p>Este navegador no gestiona archivos pdf.</p>
+</object>
+
+
+<p><%= link_to 'Edit', edit_cuento_path(@cuento) %></p>
+
+
+

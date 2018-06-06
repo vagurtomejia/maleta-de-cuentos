@@ -1,13 +1,60 @@
+
 <%= form_for cuento do |f| %>
   <div>
-    <%= f.label :titulo %>
+    <%= f.label :título %>
     <%= f.text_field :titulo %>
+  </div>
+
+  <div>
+    <%= f.label :autor %>
+    <%= f.text_field :autor %>
+  </div>
+
+  <div>
+    <%= f.label :nacionalidad %>
+    <%= f.text_field :nacionalidad %>
+  </div>
+
+  <div>
+    <%= f.label :región %>
+    <%= f.text_field :region %>
+  </div>
+
+  <div>
+    <%= f.label :tipo %>
+    <%= f.text_field :tipo %>
+  </div>
+
+  <div>
+    <%= f.label :editorial %>
+    <%= f.text_field :editorial %>
+  </div>
+
+  <div>
+    <%= f.label :isbn %>
+    <%= f.text_field :isbn %>
+  </div>
+
+  <div>
+    <%= f.label :personaje %>
+    <%= f.text_area :personaje %>
+  </div>
+
+  <div>
+    <%= f.label :tema %>
+    <%= f.text_area :tema %>
+  </div>
+
+  <div>
+    <%= f.label :version %>
+    <%= f.text_area :version %>
   </div>
 
   <div>
     <%= f.label :archivo %>
     <%= f.file_field :archivo %>
   </div>
+
 
   <%= f.submit %>
 <% end %>
