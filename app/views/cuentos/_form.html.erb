@@ -1,0 +1,13 @@
+<%= form_for cuento do |f| %>
+  <div>
+    <%= f.label :titulo %>
+    <%= f.text_field :titulo %>
+  </div>
+
+  <div>
+    <%= f.label :archivo %>
+    <%= f.file_field :archivo %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
