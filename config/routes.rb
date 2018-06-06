@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'cuentos/index'
+
+  get 'cuentos/create'
+
+  get 'cuentos/new'
+
+  get 'cuentos/edit'
+
+  get 'cuentos/show'
+
+  get 'cuentos/update'
+
+  get 'cuentos/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   #ßresources :cuentos
