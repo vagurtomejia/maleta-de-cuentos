@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  autor: MyString
+  nacionalidad: MyString
+  region: MyString
+  tipo: MyString
+  editorial: MyString
+  isbn: MyString
+  personaje: MyText
+  tema: MyText
+  version: MyText
+  archivo: MyString
+
+two:
+  titulo: MyString
+  autor: MyString
+  nacionalidad: MyString
+  region: MyString
+  tipo: MyString
+  editorial: MyString
+  isbn: MyString
+  personaje: MyText
+  tema: MyText
+  version: MyText
+  archivo: MyString
