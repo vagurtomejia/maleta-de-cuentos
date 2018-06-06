@@ -1,0 +1,6 @@
+<h2><%= link_to cuento.titulo, cuento_path(cuento) %></h2>
+
+<p><%= truncate(cuento.tema, length: 150) %></p>
+
+<p><%= link_to 'Edit', edit_cuento_path(cuento) %></p>
+<hr>
