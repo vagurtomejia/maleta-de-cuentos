@@ -22,7 +22,9 @@
 
   <div>
     <%= f.label :tipo %>
-    <%= f.text_field :tipo %>
+    <%= f.select :tipo_id, options_for_select(@tipos_options), {:prompt => "--seleccione tipo--"}, { id: 'tipos_select' } %>
+    <%= f.select :subtipo_id, options_for_select(@subtipos_options), {:prompt => "--seleccione subtipo--"}, { id: 'subtipos_select' } %>
+
   </div>
 
   <div>
@@ -46,7 +48,7 @@
   </div>
 
   <div>
-    <%= f.label :version %>
+    <%= f.label :versión %>
     <%= f.text_area :version %>
   </div>
 
