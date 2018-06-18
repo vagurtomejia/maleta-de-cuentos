@@ -19,12 +19,12 @@
 
 <p>
   <strong>Tipo:</strong>
-  <%= @cuento.tipo.nombre %>
+  <%= @cuento.tipo.nombre if !@cuento.tipo.nil?%>
 </p>
 
 <p>
   <strong>Subtipo:</strong>
-  <%= @cuento.subtipo.nombre %>
+  <%= @cuento.subtipo.nombre if !@cuento.subtipo.nil? %>
 </p>
 
 <p>
