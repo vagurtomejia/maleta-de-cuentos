@@ -3,24 +3,11 @@ class CuentosController < ApplicationController
   before_action :set_cuento, only: [:show, :edit, :update]
 
   def index
-    # puts "===============cuento index================="
     @cuentos = Cuento.order('titulo ASC')
   end
 
   def create
-    puts "===============cuento create================="
-    # puts "---------------------------------------------"
     @cuento = Cuento.new(cuento_params)
-    # puts "cuento params = #{cuento_params}"
-    # puts " @tipos_options = "
-    # p  @tipos_options
-    # puts " @subtipos_options = "
-    # p  @subtipos_options
-    # puts " @cuento = "
-    # p  @cuento
-    # puts "---------------------------------------------"
-    # puts "---------------------------------------------"
-
 
     if @cuento.save
       redirect_to cuentos_path
@@ -31,7 +18,6 @@ class CuentosController < ApplicationController
   end
 
   def new
-    puts "===============cuento new================="
     @cuento = Cuento.new
     init_tipos_subtipos
   end
