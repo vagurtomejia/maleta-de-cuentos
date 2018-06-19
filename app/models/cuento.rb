@@ -6,6 +6,6 @@ class Cuento < ActiveRecord::Base
   validates :titulo, presence: true, length: {minimum: 2}
   validates :autor, presence: true
   validates :nacionalidad, presence: true
-  validates :archivo, presence: true
+  #validates :archivo, presence: true
   #validates :archivo, file_size: { less_than: 40. megabytes }
 end
