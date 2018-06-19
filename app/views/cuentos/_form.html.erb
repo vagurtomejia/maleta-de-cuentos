@@ -2,57 +2,68 @@
 <%= render 'shared/errors', object: cuento %>
 
 <%= form_for cuento do |f| %>
-  <div>
-    <%= f.label :título %>
-    <%= f.text_field :titulo %>
-  </div>
 
-  <div>
-    <%= f.label :autor %>
-    <%= f.text_field :autor %>
-  </div>
+  <fieldset>
+    <legend>Datos generales:</legend>
 
-  <div>
-    <%= f.label :nacionalidad %>
-    <%= f.text_field :nacionalidad %>
-  </div>
+      <div>
+        <%= f.label :título %>
+        <%= f.text_field :titulo %>
+      </div>
 
-  <div>
-    <%= f.label :región %>
-    <%= f.text_field :region %>
-  </div>
+      <div>
+        <%= f.label :autor %>
+        <%= f.text_field :autor %>
+      </div>
 
-  <div>
-    <%= f.label :tipo %>
-    <%= f.select :tipo_id, options_for_select(@tipos_options), {:prompt => "--seleccione tipo--"}, { id: 'tipos_select' } %>
-    <%= f.select :subtipo_id, options_for_select(@subtipos_options), {:prompt => "--seleccione subtipo--"}, { id: 'subtipos_select' } %>
+      <div>
+        <%= f.label :nacionalidad %>
+        <%= f.text_field :nacionalidad %>
+      </div>
 
-  </div>
+      <div>
+        <%= f.label :región %>
+        <%= f.text_field :region %>
+      </div>
 
-  <div>
-    <%= f.label :editorial %>
-    <%= f.text_field :editorial %>
-  </div>
+      <div>
+        <%= f.label :tipo %>
+        <%= f.select :tipo_id, options_for_select(@tipos_options), {:prompt => "--Selecciona tipo--"}, { id: 'tipos_select' } %>
+        <%= f.select :subtipo_id, options_for_select(@subtipos_options), {:prompt => "--Selecciona subtipo--"}, { id: 'subtipos_select' } %>
 
-  <div>
-    <%= f.label :isbn %>
-    <%= f.text_field :isbn %>
-  </div>
+      </div>
 
-  <div>
-    <%= f.label :personaje %>
-    <%= f.text_area :personaje %>
-  </div>
+      <div>
+        <%= f.label :editorial %>
+        <%= f.text_field :editorial %>
+      </div>
 
-  <div>
-    <%= f.label :tema %>
-    <%= f.text_area :tema %>
-  </div>
+      <div>
+        <%= f.label :isbn %>
+        <%= f.text_field :isbn %>
+      </div>
 
-  <div>
-    <%= f.label :versión %>
-    <%= f.text_area :version %>
-  </div>
+      <div>
+        <%= f.label :versión %>
+        <%= f.text_area :version, rows: 5, cols: 50, placeholder: "¿De dónde sale este cuento (abuela, campamento, etc.)?" %>
+      </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Contenido:</legend>
+
+      <div>
+        <%= f.label :personajes %>
+        <%= f.text_area :personaje, rows: 5, cols: 50, placeholder: "Escribe los personajes principales del cuento separados por una coma." %>
+      </div>
+
+      <div>
+        <%= f.label :tema %>
+        <%= f.text_area :tema, rows: 5, cols: 50, placeholder: "¿Para qué usarías este cuento? Escribe el o los temas separados por una coma" %>
+      </div>
+
+   </fieldset>
 
   <div>
     <%= f.label :archivo %>
@@ -62,5 +73,3 @@
 
   <%= f.submit %>
 <% end %>
-
-
